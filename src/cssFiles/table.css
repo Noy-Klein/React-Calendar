@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 440px;
+}
+
+.row{
+    text-align: left;
+    display: inline-block;
+    width: 14%;
+    height: 18%;
+    border: 1px solid black;
+}

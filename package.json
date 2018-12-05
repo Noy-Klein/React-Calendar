@@ -3,6 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mobx": "^5.7.0",
+    "mobx-react": "^5.4.2",
+    "mongoose": "^5.3.14",
+    "node-calendar": "^0.1.5",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1"
