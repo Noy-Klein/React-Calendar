@@ -69,10 +69,10 @@ class Table extends Component {
            
             if (demoEvents.length > 1) {
                 if (new Date().getDate() === i && new Date().getMonth() + 1 === this.props.store.todaysMonth && new Date().getFullYear() === this.props.store.thisYear) { // not working ?
-                    demoHTML.push(<div style={{ position: 'relative' }} id={i} onClick={this.clickDay} key={i} className='row'><span style={{ backgroundColor: 'blue', color: 'white', borderRadius: '50%', padding: '5px' }}>{i}</span> <div onClick={this.openEvent} id={demoEvents[0].id} style={{ backgroundColor: demoEvents[0].color }} className='event' key={demoEvents[0].title} >{demoEvents[0].title}</div> <div id={demoEvents[0].id} onClick={this.clickDay} style={{ fontSize: '22px', color: 'blue', margin: '0', cursor: 'pointer' }}>...</div> </div>)
+                    demoHTML.push(<div style={{ position: 'relative' }} id={i} onClick={this.clickDay} key={i} className='row'><span style={{ backgroundColor: 'blue', color: 'white', borderRadius: '50%', padding: '5px' }}>{i}</span> <div onClick={this.openEvent} id={demoEvents[0].id} style={{ backgroundColor: demoEvents[0].color }} className='event' key={demoEvents[0].title} >{demoEvents[0].title}</div> <div id={demoEvents[0].id} onClick={this.clickDay} style={{ fontSize: '15px', color: 'blue', margin: '0', cursor: 'pointer' }}>...</div> </div>)
                 }
                 else {
-                    demoHTML.push(<div style={{ position: 'relative' }} id={i} onClick={this.clickDay} key={i} className='row'>{i} <div onClick={this.openEvent} id={demoEvents[0].id} style={{ backgroundColor: demoEvents[0].color }} className='event' key={demoEvents[0].title} >{demoEvents[0].title}</div> <div id={demoEvents[0].id} onClick={this.clickDay} style={{ fontSize: '22px', color: 'blue', margin: '0', cursor: 'pointer' }}>...</div> </div>)
+                    demoHTML.push(<div style={{ position: 'relative' }} id={i} onClick={this.clickDay} key={i} className='row'>{i} <div onClick={this.openEvent} id={demoEvents[0].id} style={{ backgroundColor: demoEvents[0].color }} className='event' key={demoEvents[0].title} >{demoEvents[0].title}</div> <div id={demoEvents[0].id} onClick={this.clickDay} style={{ fontSize: '15px', color: 'blue', margin: '0', cursor: 'pointer' }}>...</div> </div>)
                 }
             }
             else {
