@@ -21,7 +21,7 @@ class AddButton extends Component {
         return (
             <div>
                 <div className='addEvent'>
-                    <Tooltip arrow={6} fontSize='15px' placement='left' content='Add A New Event'>
+                    <Tooltip arrow={6} fontSize='12px' placement='top' content='Add A New Event'>
                         <div onClick={this.open}><FontAwesomeIcon size='3x' icon={faPlusCircle} /></div>
                         <Popup contentStyle={{backgroundImage: `linear-gradient(-90deg, ${this.props.store.color}, ${this.props.store.color}, blue)`, border: 'none'}} open={this.props.store.addEventBtn}
                             closeOnDocumentClick
