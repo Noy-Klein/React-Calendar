@@ -11,7 +11,7 @@ mongoose.connect(process.env.CONNECTION_STRING || 'mongodb://localhost/ReactCale
 const eventsApi = require('./apis/events');
 const monthDataApi = require('./apis/monthData');
 var app = express();
-app.use(express.static('public'));
+// app.use(express.static('public'));
 app.use(express.static('build'))
 app.use(express.static('node_modules'));
 app.use(bodyParser.json());
