@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'mobx-react';
+// var FontAwesome = require('react-fontawesome');
 import store from './store/calendarStore';
 
 window.store = store;

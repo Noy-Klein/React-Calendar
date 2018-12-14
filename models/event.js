@@ -6,8 +6,12 @@ const eventSchema = new mongoose.Schema({
     month: Number,
     year: Number,
     time: String,
+    tilDay: Number,
+    tilMonth: Number,
+    tilYear: Number,
     location: String,
-    image: String
+    image: String,
+    color: String
 });
 
 const Event = mongoose.model('event', eventSchema);

@@ -1,0 +1,31 @@
+.category{
+    font-family: Lobster;
+    font-size: 17px;
+    margin-bottom: 5px;
+    /* display: inline-block; */
+    width: 70px;
+    float: left;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.input{
+    width: 76%;
+    vertical-align: auto
+}
+
+.shorter{
+    width: 73%;
+}
+
+.colorContainer{
+    text-align: center;
+}
+
+.addTitle{
+    text-align: center;
+}
+
+::placeholder{
+    color: black;
+}

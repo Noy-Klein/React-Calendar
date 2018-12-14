@@ -1,3 +1,235 @@
 .App {
   text-align: center;
+  position: relative;
 }
+
+body{
+  background-image: url('https://png.pngtree.com/thumb_back/fw800/back_pic/03/58/92/1857a34c38b17db.jpg');
+  /* maybe a changing wallpapr from api */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+.noEvents{
+  font-family: Lobster;
+  font-size: 30px;
+}
+
+.title{
+  font-family: Lobster;
+}
+
+/* .formContainer{
+  position: fixed; 
+  margin-left: 24.5%;
+  text-align: center;
+  width: 50%;
+  bottom: 455px;
+  position: relative;
+  background-color: rgb(224, 224, 224);
+  z-index: 1;
+
+  opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.5s;
+} */
+
+.eventsContainer{
+  margin-left: 24.5%;
+  text-align: center;
+  width: 50%;
+  bottom: 455px;
+  position: relative;
+  background-color: rgb(224, 224, 224);
+  z-index: 1;
+
+  opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.5s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0.9;
+	}
+}
+
+.colorOption{
+  margin: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
+.colorOption:hover{
+  border: 2px solid black;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.event{
+  margin-bottom: 1%;
+  font-family: Oswald;
+}
+
+.plus{
+  /* float: right;
+  position: relative; */
+  position: absolute;
+  bottom: 5%;
+  right: 3%;
+  cursor: pointer;
+}
+
+.event{
+  cursor: pointer;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 7%;
+  margin: 2px;
+}
+
+button{
+  cursor: pointer;
+}
+
+.clickable{
+  cursor: pointer;
+}
+
+.x{
+  cursor: pointer;
+  /* position: absolute; */
+}
+
+
+.prev{
+  float: left;
+  margin-left: 50px;
+  line-height: 100px;
+}
+
+.tooltip{
+  line-height: 10px;
+}
+
+.next{
+  float: right;
+  margin-right: 50px;
+  line-height: 100px;
+}
+
+.addEvent{
+  /* position: absolute;
+  bottom: -10%;
+  right: 3%; */
+  margin: 20px;
+  float: right;
+  cursor: pointer;
+}
+
+.addOnDay{
+  cursor: pointer;
+  float: right;
+}
+
+.eventInPopup:hover{
+  opacity: 0.5;
+}
+
+.trash{
+  float: right;
+}
+
+.editbtn{
+  float: left;
+}
+
+.savedMessage{
+  display: inline-block;
+  background-color: rgba(158, 154, 154, 0.733);
+  opacity: 0.9;
+  text-align: center;
+  padding: 5px;
+  z-index: 1;
+  border-top-left-radius: 25px; 
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+
+  animation-name: fadeout;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 3s;
+}
+
+@keyframes fadeout {
+	0% {
+		opacity: 0.9;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.btn{
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: blue; 
+  border-radius: 5px;
+  color: white; 
+  border: 2px solid blue;
+  transition-duration: 0.4s;
+}
+
+.btn:hover{
+  background-color: white; 
+  border: 2px solid blue;
+  color: black;
+}
+
+.emoji{
+  padding: 2px 2px;
+  text-align: center;
+  background-color: inherit;
+  text-decoration: none;
+  border: none;
+}
+
+.input{
+  border: none;
+  background-color: inherit;
+  border-bottom: 2px solid black;
+  margin-bottom: 5px;
+}
+
+input:focus{
+  outline: none;
+}
+
+.emoji:focus{
+  outline: none;
+}
+
+/* .scroll{
+  width: 100%;
+  height: inherit;
+  overflow: auto;
+} */
