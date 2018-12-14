@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const SERVER_PORT = process.env.PORT || 2222;
 
-mongoose.connect('mongodb://localhost/ReactCalendarDB', function () {
+mongoose.connect(process.env.CONNECTION_STRING || 'mongodb://localhost/ReactCalendarDB', function () {
     console.log("DB connection established!!!");
 })
 
