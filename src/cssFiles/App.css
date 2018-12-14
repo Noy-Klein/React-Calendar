@@ -135,11 +135,11 @@ button{
 }
 
 .addEvent{
-  /* position: absolute;
-  bottom: -10%;
-  right: 3%; */
-  margin-right: 20px;
-  float: right;
+  position: absolute; 
+  bottom: -20%;
+  right: 1%; 
+  /* margin-right: 20px; */
+  /* float: right; */
   cursor: pointer;
 }
 

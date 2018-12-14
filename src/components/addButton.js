@@ -20,9 +20,9 @@ class AddButton extends Component {
     render() {
         return (
             <div>
-                <div className='addEvent'>
+                <div>
                     <Tooltip arrow={6} fontSize='12px' placement='top' content='Add A New Event'>
-                        <div onClick={this.open}><FontAwesomeIcon size='3x' icon={faPlusCircle} /></div>
+                        <div className='addEvent' onClick={this.open}><FontAwesomeIcon size='3x' icon={faPlusCircle} /></div>
                         <Popup contentStyle={{backgroundImage: `linear-gradient(-90deg, ${this.props.store.color}, ${this.props.store.color}, blue)`, border: 'none'}} open={this.props.store.addEventBtn}
                             closeOnDocumentClick
                             onClose={this.props.store.closeAddForm}>
