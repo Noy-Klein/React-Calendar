@@ -117,13 +117,13 @@ class CalendarStore {
     }
 
     @action getEvents = () => {
-        Axios.get('http://localhost:2222/getdays/allevents').then((data) => {
+        Axios.get('/getdays/allevents').then((data) => {
             this.events = data.data
         })
     }
 
     @action getMonthDetails = () => {
-        Axios.get(`http://localhost:2222/getdays/${this.thisYear}/${this.todaysMonth}`).then((data) => {
+        Axios.get(`/getdays/${this.thisYear}/${this.todaysMonth}`).then((data) => {
             this.monthDetails = data.data;
             this.monthDetails[0] += 2;
         })
@@ -148,13 +148,13 @@ class CalendarStore {
     }
 
     @action addEvent = (newEvent) => {
-        Axios.post('http://localhost:2222/getdays/addevent', newEvent).then((data) => {
+        Axios.post('/getdays/addevent', newEvent).then((data) => {
             this.events.push(data.data)
         })
     }
 
     @action saveEventChanges = (edited) => {
-        Axios.post('http://localhost:2222/getdays/editEvent' , edited).then((data)=>{
+        Axios.post('/getdays/editEvent' , edited).then((data)=>{
             let event = this.events.find(e => e._id === edited._id)
             let index = this.events.indexOf(event)
             this.events.splice(index,1 ,edited);
@@ -163,7 +163,7 @@ class CalendarStore {
     }
 
     clickOnEvent = (id) => {
-        Axios.get('http://localhost:2222/getdays/findEvent/' + id).then((data) => {
+        Axios.get('/getdays/findEvent/' + id).then((data) => {
             this.currentEvent = data.data;
         })
     }
@@ -171,11 +171,11 @@ class CalendarStore {
     getEventsOfDay = (day) => {
         let wantedDay;
         if (day.split('').length > 2) {
-            Axios.get('http://localhost:2222/getdays/findEvent/' + day).then((data) => {
+            Axios.get('/getdays/findEvent/' + day).then((data) => {
                 wantedDay = (data.data.day).toString();
                 this.wantedDay = wantedDay
             }).then(() => {
-                Axios.get(`http://localhost:2222/getdays/allevents/${wantedDay}/${this.todaysMonth}/${this.thisYear}`).then((data) => {
+                Axios.get(`/getdays/allevents/${wantedDay}/${this.todaysMonth}/${this.thisYear}`).then((data) => {
                     this.daysEvents = data.data
                 })
             })
@@ -183,7 +183,7 @@ class CalendarStore {
         else {
             wantedDay = day;
             this.wantedDay = wantedDay
-            Axios.get(`http://localhost:2222/getdays/allevents/${wantedDay}/${this.todaysMonth}/${this.thisYear}`).then((data) => {
+            Axios.get(`/getdays/allevents/${wantedDay}/${this.todaysMonth}/${this.thisYear}`).then((data) => {
                 this.daysEvents = data.data
             })
         }
@@ -196,7 +196,7 @@ class CalendarStore {
     }
 
     deleteEvent = (id) => {
-        Axios.delete('http://localhost:2222/getdays/deleteevent/' + id).then((data) => {
+        Axios.delete('/getdays/deleteevent/' + id).then((data) => {
             let wantedEvent = this.events.find(e => e._id === id);
             let indexInCalendarEvents = this.events.indexOf(wantedEvent);
             this.events.splice(indexInCalendarEvents, 1);

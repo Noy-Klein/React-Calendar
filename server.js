@@ -12,6 +12,7 @@ const eventsApi = require('./apis/events');
 const monthDataApi = require('./apis/monthData');
 var app = express();
 app.use(express.static('public'));
+app.use(express.static('build'))
 app.use(express.static('node_modules'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -26,6 +27,10 @@ app.use(function (req, res, next) {
 
 app.use(eventsApi)
 app.use(monthDataApi)
+
+app.get('*', (req,res)=>{
+    res.sendFile( path.join(__dirname, '/build/index.html'))
+})
 
 app.listen(SERVER_PORT, () => {
     console.log("Server started on port " + SERVER_PORT);
