@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-const SERVER_PORT = 2222;
+const SERVER_PORT = process.env.PORT || 2222;
 
 mongoose.connect('mongodb://localhost/ReactCalendarDB', function () {
     console.log("DB connection established!!!");
