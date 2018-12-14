@@ -1,3 +1,5 @@
+I created a calendar website where you can save your important events, and see it in a monthly view.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
