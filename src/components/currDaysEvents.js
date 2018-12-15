@@ -119,7 +119,7 @@ class CurrentDay extends Component {
                 </Popup>
             )
         }
-        else {
+        else if(!this.props.store.daysEvents){
             return (
                 <Popup open={this.props.store.daysEventsModal}
                     closeOnDocumentClick
