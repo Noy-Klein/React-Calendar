@@ -124,7 +124,7 @@ class CurrentDay extends Component {
                 <Popup open={this.props.store.daysEventsModal}
                     closeOnDocumentClick
                     onClose={this.props.store.closeDaysEvents}>
-                    <Loader />
+                    <div className='loader'><Loader /></div>
                 </Popup>
             )
         }

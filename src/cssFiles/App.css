@@ -228,6 +228,11 @@ input:focus{
   outline: none;
 }
 
+.loader{
+  margin: 25%;
+  width: 50%;
+  height: 50%;
+}
 /* .scroll{
   width: 100%;
   height: inherit;
