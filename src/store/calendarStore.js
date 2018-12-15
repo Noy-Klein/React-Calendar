@@ -17,7 +17,7 @@ class CalendarStore {
     @observable daysEventsModal = false;
     @observable modal = false;
     @observable currentEvent = null;
-    @observable daysEvents = [];
+    @observable daysEvents = null;
     @observable addEventBtn = false;
     @observable events = [];
     @observable monthDetails = [];
@@ -84,6 +84,7 @@ class CalendarStore {
         // }
         // if(this.wantToSaveChanges){
             this.daysEventsModal = false;
+            this.daysEvents = null;
             this.editMode = false;
         // }
         // else{
